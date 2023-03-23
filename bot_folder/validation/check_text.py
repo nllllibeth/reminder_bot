@@ -11,8 +11,3 @@ def get_two_strings(text) -> list:
     new_data = new_data.replace(', ' , ',')
     res = new_data.split(',')
     return res
-    
-
-
-
-

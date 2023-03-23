@@ -51,7 +51,3 @@ class Timetable_maker():
     def scheduling(self):
         self.scheduler.add_job(self.do_every_hour, trigger='interval', hours=1)
         logging.info("Def scheduling is running")
-    
-
-
-

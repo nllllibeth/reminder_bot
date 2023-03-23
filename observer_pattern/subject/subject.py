@@ -19,5 +19,3 @@ class Subject(ABC):
         for observer in self.__observers:
             observer.update(event)
         logging.info("Subject called notify def")
-
-

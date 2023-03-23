@@ -24,6 +24,3 @@ class Controller(Subject):
             self.remove_event(event)
         else:
             logging.info(f"There are no Events to work on")
-    
-    
-    

@@ -131,14 +131,3 @@ async def finish(message: Message, state: FSMContext, controller):
                          \nTime - {time_str}")
     finally:
         await state.finish()
-
-
-        
-
-    
-
-
-
-
-    
-

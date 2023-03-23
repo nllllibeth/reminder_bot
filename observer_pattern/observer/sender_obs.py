@@ -55,5 +55,3 @@ class Sender(Observer):
             new_datetime = date_now + " " + line_str 
             line_time = datetime.strptime(new_datetime, "%d/%m/%Y %H:%M")
             self.scheduler.add_job(self.job, trigger='date', run_date=line_time, args=(line_id, line_msg, self.bot))
-
-

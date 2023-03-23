@@ -26,10 +26,4 @@ async def edit_command(message : Message, db_obs):
     names_list = db_obs.getNamesList(user_id)
     await message.answer('Please select a reminder that you want to edit')
     await message.answer("Reminders: ", reply_markup=generate_edit_reminders_names(names_list))
-
-
-
-
-
-
-    
+   

@@ -43,5 +43,4 @@ class Event():
 
     def processRequest(self, data: dict):
         self.id = data['user_id']
-    
-        
+     

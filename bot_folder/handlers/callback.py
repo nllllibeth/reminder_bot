@@ -62,8 +62,3 @@ async def edit_reminder(message: Message, state: FSMContext, controller):
     controller.receive_event(event)
     await state.finish()
     await message.answer("Your reminder was succesfully edited")
-
-
-
-
-

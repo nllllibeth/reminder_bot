@@ -52,6 +52,4 @@ def db_start():
 
     """reminders.drop_tables()
     time_records.drop_tables()"""
-
-
     

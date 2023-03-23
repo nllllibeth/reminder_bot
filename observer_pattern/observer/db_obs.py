@@ -129,22 +129,3 @@ class DB_Observer(Observer):
     def getNamesList(self, user_id):
         list = self.reminders.get_names_list(user_id)
         return list
-    
-        
-
-    
-
-    
-
-        
-        
-
-
-        
-        
-        
-
-
-
-    
-
