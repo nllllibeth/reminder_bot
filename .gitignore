@@ -1,0 +1,13 @@
+.vscode/
+venv/
+.venv/
+.env
+__pycache__/
+__pycache__
+*.py[cod]
+.history
+*.pyc
+*.log
+*.db
+reminders.db
+py_log.log
