@@ -4,7 +4,6 @@ def check_is_one_word(name_to_check : str) -> bool:
         return True
     else:
         return False
-    
 
 def get_two_strings(text) -> list:
     new_data = text.replace(' ,' , ',')

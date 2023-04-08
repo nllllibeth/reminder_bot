@@ -10,4 +10,3 @@ class StepsForm(StatesGroup):
 
 class StepsEdit(StatesGroup):
     EDIT = State()
-    RECEIVE = State()

@@ -56,20 +56,20 @@ inline_answer = InlineKeyboardMarkup(inline_keyboard=[
 ])
 
 
-def generate_delete_reminders_names(names_list):
+def generate_delete_reminders_names(namelist):
     markup = InlineKeyboardMarkup()
     markup.row_width = 1
-    for name in names_list:
+    for name in namelist:
         markup.add(InlineKeyboardButton(
             text=name[0],
             callback_data = name[0] + '_' + 'delete'
         ))
     return markup
 
-def generate_edit_reminders_names(names_list):
+def generate_edit_reminders_names(namelist):
     markup = InlineKeyboardMarkup()
     markup.row_width = 1
-    for name in names_list:
+    for name in namelist:
         markup.add(InlineKeyboardButton(
             text=name[0],
             callback_data = name[0] + '_' + 'edit'

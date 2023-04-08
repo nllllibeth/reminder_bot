@@ -20,7 +20,6 @@ def check_time_correctness(time : list) -> bool:
         logging.error(f"Error in check_time_correctness: {e}")
         return False
     
-
 def separate_times(time : list) -> list:
     times = []
     if len(time) >= 2:
@@ -33,4 +32,3 @@ def separate_times(time : list) -> list:
             time3 = time[4] + ':' + time[5]
             times.append(time3)
     return times
-    

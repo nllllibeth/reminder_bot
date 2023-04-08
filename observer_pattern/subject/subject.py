@@ -5,6 +5,7 @@ from ..observer.observer import Observer
 from .event import Event
 
 class Subject(ABC):
+    """ Abstract Subject class"""
     def __init__(self) -> None:
         self.__observers: List[Observer] = []
     

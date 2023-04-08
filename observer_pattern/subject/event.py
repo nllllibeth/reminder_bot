@@ -1,46 +1,51 @@
-import logging
+from enum import Enum
+
+class Event_status(Enum):
+    """ Class that enumerate all statuses of Event"""
+    EVENT_TO_CREATE = 1
+    EVENT_TO_EDIT = 2
+    EVENT_TO_DELETE = 3
+
+    def __str__(self):
+      return self.name
 
 class Event():
-    event_id = 0
+    """ Class that displays data received from the Bot, and will be sent as update for all the Observers"""
+    cls_id = 1
 
-    def __init__(self, status: str, data: dict):
-        self.event_id += 1
-        self.status = status
-        if status == "EventCreate":
-            self.processCreate(data)
-        elif status == "EventRequestEdit":
-            self.processRequestEdit(data)
-        elif status == 'EventReceiveEdit':
-            self.processReceiveEdit(data)
-        elif status == "NamesListRequest":
-            self.processRequest(data)
-        elif status == "EventDelete":
-            self.processDelete(data)
-        else: 
-            logging.warning("Something went wrong with Event init")
+    def __init__(self):
+        self.event_id = Event.cls_id
+        Event.cls_id += 1
 
-
-    def processCreate(self, data: dict):
-        self.id = data['user_id'] 
-        self.name = data['reminder_name']
-        self.msg = data['message']
-        self.frequency = data['frequency']
-        self.utc = data['utc']
-        self.time = data['time']  
-        logging.info(f"Event # {self.event_id} is sent to Controller")
-
-    def processDelete(self, data: dict):
-        self.name = data['reminder_name']
+    @staticmethod
+    def build_event_to_delete(reminder_name : str):
+        event = Event()
+        event.status = Event_status.EVENT_TO_DELETE
+        event.reminder_name = reminder_name
+        return event
     
-    def processRequestEdit(self, data: dict):
-        self.id = data['user_id']
-        self.old_name = data['reminder_name']
+    @staticmethod
+    def build_event_to_edit(user_id, new_reminder_name, new_msg):
+        event = Event()
+        event.user_id = user_id
+        event.status = Event_status.EVENT_TO_EDIT
+        event.new_reminder_name = new_reminder_name
+        event.new_msg = new_msg
+        event.rem_id = None
+        event.frequency = None
+        return event
     
-    def processReceiveEdit(self, data : dict):
-        self.id = data['user_id']
-        self.new_name = data['new_name']
-        self.new_msg = data['new_msg']
-
-    def processRequest(self, data: dict):
-        self.id = data['user_id']
-     
+    @staticmethod
+    def build_event_to_create(user_id, reminder_name, msg, frequency, utc, time):
+        event = Event()
+        event.status = Event_status.EVENT_TO_CREATE
+        event.user_id = user_id
+        event.reminder_name = reminder_name
+        event.msg = msg
+        event.frequency = frequency
+        event.utc = utc
+        event.time = time 
+        event.rem_id = None
+        event.time_id = None
+        return event
+    
