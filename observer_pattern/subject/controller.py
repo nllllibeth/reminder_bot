@@ -1,14 +1,14 @@
 import logging
 from .subject import Subject, Event
 
+""" Class that receive an Event from the bot and notify about such an update all its Observers"""
 class Controller(Subject):
-    """ Class that receive an Event from the bot and notify about such an update all its Observers"""
     def __init__(self) -> None:
         super().__init__()
         self.events = [] 
     
     def receive_event(self, event: Event):
-        logging.info(f"Controller accepts {event.status} #{event.event_id}")
+        logging.info(f"Controller accepted {event.status} #{event.event_id}")
         self.events.append(event)
         self.send_event(event)
     

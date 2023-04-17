@@ -1,8 +1,8 @@
 import sqlite3 as sq
 import logging
 
+""" Class that defines reminders table in the reminders.db database"""
 class Reminders_db():
-    """ Class that defines reminders table in the reminders.db database"""
     def __init__(self):
         self.db = sq.connect('reminders.db')
         self.cur = self.db.cursor()

@@ -11,12 +11,11 @@ from .states import StepsForm
 from ..keyboards.inline import inline_frequency, inline_answer
 from ..keyboards.reply import get_loc
 from ..validation import *
-from observer_pattern.subject.event import Event, Event_status
+from observer_pattern.subject.event import Event
 
 storage = MemoryStorage()
 
 async def start_form(call: CallbackQuery):
-    # callback_query_handler for pressed 'set' button 
     await call.message.answer(f"{call.from_user.first_name}, \r\nPlease enter a name for your reminder.")
     await call.answer()
     await StepsForm.GET_NAME.set()
@@ -101,9 +100,6 @@ async def finish(message: Message, state: FSMContext, controller):
         times[i] = datetime.strftime(current, "%H:%M")
     async with state.proxy() as data:
         data['time'] = times
-        logging.debug("Times here are ", times)
-        event_data = data._data
-        logging.debug("Event data in form ", event_data)
     await message.answer(f"Setted time is {time_str}")
 
     try:

@@ -38,9 +38,9 @@ def time_records_drop() -> None:
     cur.execute("DROP TABLE reminders")
     db.commit()
 
-def db_start() -> None:
-    """ Function for starting reminders.db databases 
+""" Function for starting reminders.db databases 
     and creating reminders and time_records tables in it"""
+def db_start() -> None:
     reminders_start()
     time_records_start()
     logging.info("Tables reminders and time_records created successfully")

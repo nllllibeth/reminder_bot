@@ -2,9 +2,9 @@
 ***
 ## Description
 
-Written in Python using [Aiogram](https://aiogram.dev/), a tool that reminds a user with their own messages at specified time, using [Apscheduler](https://apscheduler.readthedocs.io/en/3.x/). 
 
-Written in Python using [Aiogram](https://aiogram.dev/), a tool with that a user can set a reminder with their own messages, frequency, time and the bot will send notifications with setted message according to specified time, using [Apscheduler](https://apscheduler.readthedocs.io/en/3.x/). 
+
+Written in Python, developed using the [SQLite](https://sqlite.org/index.html) database,  the [Aiogram](https://aiogram.dev/) library and [Apscheduler](https://apscheduler.readthedocs.io/en/3.x/), a Telegram bot that allows users to set reminders with reminders with custom messages, frequency, and specific times. The bot then sends notifications containing the user's specified message at the designated times.
 
 ***
 

@@ -19,7 +19,6 @@ inline_commands = InlineKeyboardMarkup(inline_keyboard=[
     ]
 ])
 
-
 inline_frequency = InlineKeyboardMarkup(inline_keyboard=[
     [
         InlineKeyboardButton(
@@ -41,7 +40,6 @@ inline_frequency = InlineKeyboardMarkup(inline_keyboard=[
     ]
 ])
 
-
 inline_answer = InlineKeyboardMarkup(inline_keyboard=[
     [
         InlineKeyboardButton(
@@ -54,7 +52,6 @@ inline_answer = InlineKeyboardMarkup(inline_keyboard=[
         ),
     ]
 ])
-
 
 def generate_delete_reminders_names(namelist):
     markup = InlineKeyboardMarkup()

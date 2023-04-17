@@ -1,7 +1,7 @@
 from enum import Enum
 
+""" Class that enumerate all statuses of Event"""
 class Event_status(Enum):
-    """ Class that enumerate all statuses of Event"""
     EVENT_TO_CREATE = 1
     EVENT_TO_EDIT = 2
     EVENT_TO_DELETE = 3
@@ -9,8 +9,8 @@ class Event_status(Enum):
     def __str__(self):
       return self.name
 
+""" Class that displays data received from the Bot, and will be sent as update for all the Observers"""
 class Event():
-    """ Class that displays data received from the Bot, and will be sent as update for all the Observers"""
     cls_id = 1
 
     def __init__(self):
@@ -48,4 +48,3 @@ class Event():
         event.rem_id = None
         event.time_id = None
         return event
-    

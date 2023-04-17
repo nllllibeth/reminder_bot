@@ -1,8 +1,8 @@
 import sqlite3 as sq
 from ...subject.event import Event
 
+""" Class that defines time_records table in the reminders.db database"""
 class Time_records_db(): 
-    """ Class that defines time_records table in the reminders.db database"""
     def __init__(self) -> None:
         self.db = sq.connect('reminders.db')
         self.cur = self.db.cursor()

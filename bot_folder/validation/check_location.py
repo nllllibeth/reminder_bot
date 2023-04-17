@@ -3,7 +3,7 @@ from datetime import datetime
 from geopy.geocoders import Nominatim
 
 def get_location(latitude, longitude ) -> list:
-    geolocator = Nominatim(user_agent='geoapiExercises', timeout=10000)
+    geolocator = Nominatim(user_agent='NominatimApi', timeout=10000)
     location_name = geolocator.reverse(str(latitude) + "," + str(longitude), language='en')
     address = location_name.raw['address']
     country = address.get('country', '')

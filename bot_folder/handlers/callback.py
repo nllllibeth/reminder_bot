@@ -7,7 +7,6 @@ from ..fsm.states import StepsEdit
 from ..validation import get_two_strings
 
 async def select_command(call: CallbackQuery, db_obs):
-    # callback_query_handler for pressed 'edit' and 'stop' buttons
     user_id = call.from_user.id
     namelist = db_obs.make_namelist(user_id)
     if call.data == 'command_stop':

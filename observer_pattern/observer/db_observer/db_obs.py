@@ -6,10 +6,9 @@ from ...subject.event import Event, Event_status
 from .reminders_db import Reminders_db
 from .time_records_db import Time_records_db
 
-
-class DB_Observer(Observer):
-    """ Database observer that can create, edit, delete record based on received update,
+""" Database observer that can create, edit, delete record based on received update,
     also it can retrieve data from the database for maintating outer functions and classes"""
+class DB_Observer(Observer):
     def __init__(self, controller: Controller):
         self.__controller = controller
         self.event: Event = None
@@ -41,7 +40,6 @@ class DB_Observer(Observer):
             self.reminders.edit_record(rem_id, new_name, new_msg)
             event.rem_id = rem_id
             del self.reminders_to_edit[user_id]  
-            logging.debug("Func edit record called")
             logging.info(f"DB changes were made in reminder # {rem_id}")
         except KeyError:
             logging.error(f"KeyError : there're no reminders to edit from user {user_id}")
