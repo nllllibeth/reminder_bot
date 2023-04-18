@@ -10,9 +10,7 @@ Written in Python, developed using the [SQLite](https://sqlite.org/index.html) d
 
 ## GIF demo
 
-
-<img src="https://user-images.githubusercontent.com/73400470/232712569-c3695f25-976c-4b9a-8d17-de93e1ad22c2.gif" width="270" height="600"/>              <img src="https://user-images.githubusercontent.com/73400470/232710619-b2e68f19-82b2-4523-9141-91fd5ec6c8e5.gif" width="270" height="600"/>
-
+<img src="https://user-images.githubusercontent.com/73400470/232717847-f35e1519-508e-4083-bd31-7147827a7037.gif" width="300" /> <img src="https://user-images.githubusercontent.com/73400470/232717890-0ce96dac-1906-415c-bd9c-18d7e70576cb.gif" width="300" />
 
 
 ***
