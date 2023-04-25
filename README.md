@@ -4,7 +4,7 @@
 
 
 
-Written in Python, developed using the [SQLite](https://sqlite.org/index.html) database,  the [Aiogram](https://aiogram.dev/) library and [Apscheduler](https://apscheduler.readthedocs.io/en/3.x/), a Telegram bot that allows users to set reminders with reminders with custom messages, frequency, and specific times. The bot then sends notifications containing the user's specified message at the designated times.
+Written in Python, developed using the [SQLite](https://sqlite.org/index.html) database,  the [Aiogram](https://aiogram.dev/) library and [Apscheduler](https://apscheduler.readthedocs.io/en/3.x/), a Telegram bot that allows users to set reminders with custom messages, frequency, and specific times. The bot then sends notifications containing the user's specified message at the designated times.
 
 ***
 
