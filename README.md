@@ -1,16 +1,16 @@
-#[Reminder_bot](https://t.me/nllllibeth_reminder_bot)
+# [Reminder_bot](https://t.me/nllllibeth_reminder_bot)
 ***
 ## Description
 
 
 
-Written in Python, developed using the [SQLite](https://sqlite.org/index.html) database,  the [Aiogram](https://aiogram.dev/) library and [Apscheduler](https://apscheduler.readthedocs.io/en/3.x/), a Telegram bot that allows users to set reminders with reminders with custom messages, frequency, and specific times. The bot then sends notifications containing the user's specified message at the designated times.
+Written in Python, developed using the [SQLite](https://sqlite.org/index.html) database,  the [Aiogram](https://aiogram.dev/) library and [Apscheduler](https://apscheduler.readthedocs.io/en/3.x/), a Telegram bot that allows users to set reminders with custom messages, frequency, and specific times. The bot then sends notifications containing the user's specified message at the designated times.
 
 ***
 
 ## GIF demo
 
-<img src="https://gifyu.com/image/SIkX4/">
+<img src="https://user-images.githubusercontent.com/73400470/232717847-f35e1519-508e-4083-bd31-7147827a7037.gif" width="300" /> <img src="https://user-images.githubusercontent.com/73400470/232717890-0ce96dac-1906-415c-bd9c-18d7e70576cb.gif" width="300" />
 
 
 ***
